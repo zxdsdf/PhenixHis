@@ -1,0 +1,7 @@
+server:
+  port: 33399
+spring:
+  application:
+    name: phenix-Paticnt-provider
+  profiles:
+    active: commons,data

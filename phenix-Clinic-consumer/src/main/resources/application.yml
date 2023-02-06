@@ -1,0 +1,7 @@
+server:
+  port: 44411
+spring:
+  application:
+    name: phenix-Clinic-consumer
+  profiles:
+    active: commons

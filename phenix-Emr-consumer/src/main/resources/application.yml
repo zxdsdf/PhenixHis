@@ -1,0 +1,7 @@
+server:
+  port: 22211
+spring:
+  application:
+    name: phenix-Emr-consumer
+  profiles:
+    active: commons

@@ -1,0 +1,30 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/his_db?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai&useSSL=false&allowPublicKeyRetrieval=true
+    username: root
+    password: root
+    ######## 配置使用的数据库连接池技术
+    type: com.alibaba.druid.pool.DruidDataSource
+    druid:
+      min-idle: 3
+      max-active: 12
+      initial-size: 5
+      min-evictable-idle-time-millis: 30000
+      max-evictable-idle-time-millis: 60000
+      ######## 配置 Druid 所提供的数据监控中心信息
+      stat-view-servlet:
+        enabled: true
+        ######## 设置控制中心访问路径
+        url-pattern: /druid/*
+        login-username: phenix
+        login-password: phenix
+      web-stat-filter:
+        enabled: true
+        url-pattern: /*
+        ######### 设置不需要进行数据监控的请求
+        exclusions: "*.ji,*.css,*.gif,*.jpg,*.jpeg,*png,*bmp,*.ico,/druid/*"
+######## 配置MyBatis Plus 信息
+mybatis-plus:
+  mapper-locations: classpath:/mapper/*
+  type-aliases-package: cn.ekgc.phenix.*.*.pojo.entity

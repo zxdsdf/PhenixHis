@@ -1,0 +1,7 @@
+server:
+  port: 33311
+spring:
+  application:
+    name: phenix-Paticnt-consumer
+  profiles:
+    active: commons

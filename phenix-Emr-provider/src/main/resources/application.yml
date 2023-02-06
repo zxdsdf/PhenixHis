@@ -1,0 +1,7 @@
+server:
+  port: 22299
+spring:
+  application:
+    name: phenix-Emr-provider
+  profiles:
+    active: commons,data

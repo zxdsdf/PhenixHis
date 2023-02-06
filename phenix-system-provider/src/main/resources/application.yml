@@ -1,0 +1,7 @@
+server:
+  port: 11199
+spring:
+  application:
+    name: phenix-system-provider
+  profiles:
+    active: commons,data

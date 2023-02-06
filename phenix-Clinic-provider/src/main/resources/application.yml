@@ -1,0 +1,7 @@
+server:
+  port: 444499
+spring:
+  application:
+    name: phenix-Clinic-provider
+  profiles:
+    active: commons,data
