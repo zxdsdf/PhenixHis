@@ -19,18 +19,18 @@
   <url>http://www.example.com</url>
 
   <properties>
-    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <maven.compiler.source>1.8</maven.compiler.source>
-    <maven.compiler.target>1.8</maven.compiler.target>
-	<spring-cloud.version>2021.0.5</spring-cloud.version>
-	<spring-cloud.alibaba.version>2021.0.4.0</spring-cloud.alibaba.version>
-    <lombok.version>1.18.24</lombok.version>
-	<mapstruct.version>1.5.3.Final</mapstruct.version>
-	<hutool-all.version>5.8.11</hutool-all.version>
-	<jwt.version>4.2.1</jwt.version>
-	<druid.version>1.2.15</druid.version>
-	<mp.version>3.5.3.1</mp.version>
-	<pagehelper.version>1.4.6</pagehelper.version>
+	  <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+	  <maven.compiler.source>1.8</maven.compiler.source>
+	  <maven.compiler.target>1.8</maven.compiler.target>
+	  <spring-cloud.version>2021.0.5</spring-cloud.version>
+	  <spring-cloud.alibaba.version>2021.0.4.0</spring-cloud.alibaba.version>
+	  <lombok.version>1.18.24</lombok.version>
+	  <mapstruct.version>1.5.3.Final</mapstruct.version>
+	  <hutool-all.version>5.8.11</hutool-all.version>
+	  <jwt.version>4.2.1</jwt.version>
+	  <druid.version>1.2.15</druid.version>
+	  <mp.version>3.5.3.1</mp.version>
+	  <pagehelper.version>1.4.6</pagehelper.version>
   </properties>
 
   <dependencies>

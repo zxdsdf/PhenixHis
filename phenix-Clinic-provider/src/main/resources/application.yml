@@ -1,5 +1,5 @@
 server:
-  port: 444499
+  port: 44499
 spring:
   application:
     name: phenix-Clinic-provider

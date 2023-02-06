@@ -1,6 +1,7 @@
 package cn.ekgc.phenix.base.pojo.vo;
 
-import cn.ekgc.phenix.base.page.enums.ResponseCodeEnum;
+
+import cn.ekgc.phenix.base.pojo.enums.ResponseCodeEnum;
 
 import java.io.Serializable;
 
@@ -16,7 +17,7 @@ public class ResponseVO<E> implements Serializable {
 	private String message;         // 系统响应结果信息
 	private E data;                 // 系统响应结果数据
 
-	private ResponseVO(ResponseCodeEnum responseCode,String message,E data) {
+	private ResponseVO(ResponseCodeEnum responseCode, String message, E data) {
 		this.code = responseCode.getCode();
 		this.message = message;
 		this.data = data;
