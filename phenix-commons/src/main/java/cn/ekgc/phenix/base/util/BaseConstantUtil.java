@@ -22,4 +22,5 @@ public class BaseConstantUtil {
 	}
 
 	public static final String BASE_SECRET = props.getProperty("base.secret");
+	public static final String BASE_TOKEN_HEADER = props.getProperty("base.token.header");
 }
