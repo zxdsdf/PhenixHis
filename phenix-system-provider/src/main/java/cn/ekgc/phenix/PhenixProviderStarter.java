@@ -11,7 +11,7 @@ import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
  * @author JLS
  * @date 2023/2/6
  */
-@MapperScan("cn.ekgc.phenix.*.dao")
+@MapperScan("cn.ekgc.phenix.*.*.dao")
 @EnableDiscoveryClient
 @SpringBootApplication
 public class PhenixProviderStarter {

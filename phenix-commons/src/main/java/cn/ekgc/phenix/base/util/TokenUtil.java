@@ -37,7 +37,7 @@ public class TokenUtil {
 	 * @param expireSec
 	 * @return
 	 */
-	public String createToken(Object payload, Long expireSec) {
+	public static String createToken(Object payload, Long expireSec) {
 		JWTCreator.Builder builder = JWT.create();
 		// 设置头部信息
 		builder.withHeader(header);
@@ -54,6 +54,7 @@ public class TokenUtil {
 				Date expireDate = new Date(new Date().getTime() + expireSec * 1000);
 				// 设置过期时间
 				builder.withExpiresAt(expireDate);
+				return builder.sign(ALGORITHM);
 			}
 		} catch (JsonProcessingException e) {
 			e.printStackTrace();

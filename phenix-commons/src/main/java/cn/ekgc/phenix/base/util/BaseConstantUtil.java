@@ -23,4 +23,8 @@ public class BaseConstantUtil {
 
 	public static final String BASE_SECRET = props.getProperty("base.secret");
 	public static final String BASE_TOKEN_HEADER = props.getProperty("base.token.header");
+	/**
+	 * <b>默认储存时间</b>
+	 */
+	public static final Long BASE_TOKEN_EXPIRE = Long.parseLong(props.getProperty("base.token.expire"));
 }

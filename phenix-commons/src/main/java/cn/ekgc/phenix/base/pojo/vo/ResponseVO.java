@@ -2,8 +2,13 @@ package cn.ekgc.phenix.base.pojo.vo;
 
 
 import cn.ekgc.phenix.base.pojo.enums.ResponseCodeEnum;
+import lombok.Data;
+import org.springframework.validation.BindingResult;
+import org.springframework.validation.FieldError;
 
 import java.io.Serializable;
+import java.util.List;
+import java.util.stream.Collectors;
 
 /**
  * <b>系统响应视图信息</b>
@@ -11,6 +16,7 @@ import java.io.Serializable;
  * @author JLS
  * @date 2023/2/6
  */
+@Data
 public class ResponseVO<E> implements Serializable {
 	private static final long serialVersionUID = -3686820732404726599L;
 	private Integer code;            // 系统响应编码
@@ -46,6 +52,20 @@ public class ResponseVO<E> implements Serializable {
 	 */
 	public static ResponseVO unauthResponseVO() {
 		return new ResponseVO(ResponseCodeEnum.RESPONSE_CODE_UNAUTH,ResponseCodeEnum.RESPONSE_CODE_UNAUTH.getRemark(),"");
+	}
+
+	/**
+	 * <b>获得系统业务处理失败视图</b>
+	 * @param bindingResult
+	 * @return
+	 */
+	public static ResponseVO failureResponseVO(BindingResult bindingResult){
+		// 获得错误信息
+		List<FieldError> errorsList = bindingResult.getFieldErrors();
+		List<String> errorMessageList = errorsList.stream().map(message ->{
+			return message.getField();
+		}).collect(Collectors.toList());
+		return new ResponseVO(ResponseCodeEnum.RESPONSE_CODE_FAILURE, "效验错误", errorMessageList);
 	}
 
 	/**

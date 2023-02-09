@@ -17,5 +17,6 @@ public class Role extends BaseEntity {
 
 	private static final long serialVersionUID = 6774567826148463810L;
 	private Long id;//主键（自增长）
+	private String code;    // 角色编码
 	private String name;//角色名称
 }
