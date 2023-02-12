@@ -18,7 +18,7 @@ public class Router {
 	private String path;        // 路由链接地址
 	private Meta meta;          // 路由信息
 	private List<Router> children;   // 二级路由列表
-	public Router() {}
+	public Router(){}
 
 	public Router(String name, String component, String path, String title,String icon) {
 		this.name = name;
@@ -30,6 +30,7 @@ public class Router {
 	private class Meta implements Serializable {
 		private String title;       // 菜单文本
 		private String icon;        // 菜单图标
+		public Meta() {}
 
 		public Meta(String title, String icon) {
 			this.title = title;

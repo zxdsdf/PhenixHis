@@ -26,5 +26,5 @@ spring:
         exclusions: "*.ji,*.css,*.gif,*.jpg,*.jpeg,*png,*bmp,*.ico,/druid/*"
 ######## 配置MyBatis Plus 信息
 mybatis-plus:
-  mapper-locations: classpath:/mapper/*
+  mapper-locations: classpath:/mapper/*/*/*.Mapper.xml
   type-aliases-package: cn.ekgc.phenix.*.*.pojo.entity

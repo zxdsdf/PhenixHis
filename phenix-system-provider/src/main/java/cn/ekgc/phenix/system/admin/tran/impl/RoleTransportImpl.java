@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
  * @author JLS
  * @date 2023/2/9
  */
-@RestController
+@RestController("roleTransport")
 @RequestMapping("/trans/system/role")
 public class RoleTransportImpl implements RoleTransport {
 

@@ -5,19 +5,31 @@
 <mapper namespace="cn.ekgc.phenix.system.admin.dao.MenuDao">
 	<select id="findMenuListForRole" parameterType="java.util.Map" resultType="Menu">
 		select
-		    m.id,
-		    m.parent,
-		    m.component,
-		    m.title,
-		    m.icon,
-		    m.order,
-		    m.status,
-		    m.created_by,
-		    m.created_time,
-		    m.modified_by,
-		    m.modified_time
+			m.id,
+			m.parent,
+			m.component,
+			m.title,
+			m.icon,
+			m.order,
+			m.status,
+			m.created_by,
+			m.created_time,
+			m.modified_by,
+			m.modified_time
 		from
-		    sys_menu m left join sys_menu p on m.parent=p.id
-			join sus_role_menu rm on m.id=rm.menu
+			sys_menu m left join sys_menu p on m.parent=p.id
+			join sys_role_menu rm on m.id=rm.menu
+		where
+			rm.role=#{role}
+		and
+			<if test="parent == null">
+				m.parent is null
+			</if>
+			<if test="parent != null">
+				m.parent=#{parent}
+			</if>
+		and
+			m.status=#{status}
+		order by m.order, m.created_time asc
 	</select>
 </mapper>
